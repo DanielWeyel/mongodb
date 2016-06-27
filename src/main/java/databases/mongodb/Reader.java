@@ -1,9 +1,5 @@
 package databases.mongodb;
 
-import static databases.redis.Constants.ID;
-import static databases.redis.Constants.NAME;
-import static databases.redis.Constants.PROPERTIES;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,8 +10,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.mongodb.client.MongoCollection;
-
-import databases.redis.MyObject;
 
 public class Reader {
 	
@@ -33,13 +27,13 @@ public class Reader {
 			//JSONObjekte
 			JSONObject jsonObject = new JSONObject(json);
 			
-			JSONArray jsonArray = jsonObject.getJSONArray(PROPERTIES);
+			JSONArray jsonArray = jsonObject.getJSONArray(Constants.PROPERTIES);
 			
 			for (Object prop : jsonArray){
 				props.add((String) prop);
 			}
 			
-			resultList.add(new MyObject(jsonObject.getInt(ID), jsonObject.getString(NAME), props));
+			resultList.add(new MyObject(jsonObject.getInt(Constants.ID), jsonObject.getString(Constants.NAME), props));
 			
 		}
 				

@@ -7,8 +7,6 @@ import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
-import databases.redis.MyObject;
-
 public class Writer {
 			
 	public static void writeRandomObjects(long number, MongoCollection<Document> collection){

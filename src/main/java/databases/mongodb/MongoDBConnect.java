@@ -8,8 +8,6 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-import databases.redis.MyObject;
-
 public class MongoDBConnect {
 	public static void main(String[] args) {
 		
